@@ -1,13 +1,17 @@
 const listing=require("../models/listing.js");
 
 
-module.exports.index=async (req,res)=>{
+// module.exports.index=async (req,res)=>{
    
+//     const alllistings= await listing.find({});
+//     res.render("listings/index.ejs",{alllistings});
+
+// }
+module.exports.index=async (req,res)=>{
+    console.log(">>> INDEX ROUTE HIT - /listings called");
     const alllistings= await listing.find({});
     res.render("listings/index.ejs",{alllistings});
-
 }
-
 
 
 
