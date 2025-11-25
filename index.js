@@ -149,9 +149,9 @@ app.use((req,res,next)=>{
 
 
 
-app.get("/",(req,res)=>{
-    res.send("hi,i am root");
-});
+// app.get("/",(req,res)=>{
+//     res.send("hi,i am root");
+// });
 
 app.use("/listings",listingsroutes);
 app.use("/listings/:id/reviews",reviewsroutes);
