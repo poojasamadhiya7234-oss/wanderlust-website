@@ -1,0 +1,77 @@
+ <!-- <% layout("/layouts/boilerplate")%>
+
+<div class="row mt-3">
+  <div class="alert alert-danger col-6 offset-3" role="alert">
+    <h4 class="alert-heading"><%=err.message%></h4>
+    
+  </div>
+</div>  -->
+<% layout("/layouts/boilerplate") %>
+
+<body style="
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #ff6b6b, #feca57);
+">
+
+  <!-- Main content area (error card center me) -->
+  <main style="
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  ">
+    <div class="card shadow-lg border-0 text-center" 
+         style="max-width: 600px; width: 100%; border-radius: 20px; background-color: #fff;">
+      <div class="card-body p-5">
+        <h1 class="display-4 text-danger mb-3">⚠️ Oops!</h1>
+        <h3 class="text-dark mb-3"><%= err.message || "Something went wrong!" %></h3>
+        <p class="text-muted mb-4">
+          Status Code: <strong><%= err.statusCode || 500 %></strong>
+        </p>
+        <a href="/listings" class="btn btn-danger px-4 py-2" 
+           style="border-radius: 10px; font-size: 1.1rem;">
+          🔙 Go Back
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Fixed footer (always at bottom) -->
+  <style>
+  /* Footer ko page ke bottom me fix karne ke liye */
+ 
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  /* Center error card perfectly between header & footer */
+  main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 80px; /* Header ke liye jagah */
+    padding-bottom: 60px; /* Footer ke liye jagah */
+  }
+</style>
+
+
+
+</body>

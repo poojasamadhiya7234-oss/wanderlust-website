@@ -1,0 +1,150 @@
+<!-- <% layout("/layouts/boilerplate") %>
+
+<body>
+  <div class="container mt-5">
+    
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+       <div class="card shadow-lg border-0 rounded-4">
+          <div class="card-body p-4">
+            <h3 class="text-center mb-4">Signup on Wanderlust</h3>
+
+            <form method="POST" action="/signup" novalidate class="needs-validation">
+                
+              <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="username"
+                  id="username"
+                  required
+                />
+
+                <div class="valid-feedback"> looks good!</div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <textarea
+                  class="form-control"
+                  name="email"
+                 type="email"
+                 id="email"
+                  rows="3"
+                  required
+                ></textarea>
+                
+              </div>
+
+
+
+              <div class="mb-3">
+                <label class="form-label">Paasword</label>
+                <textarea
+                  class="form-control"
+                  name="password"
+                 type="password"
+                 id="password"
+                  rows="3"
+                  required
+                ></textarea>
+                
+              </div>
+
+              
+
+              
+
+              
+              
+
+              <div class="d-grid">
+                <button class="btn btn-success btn-lg rounded-pill" type="submit">
+                 SignUp
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body> -->
+
+
+<% layout("/layouts/boilerplate") %>
+
+<body class="bg-light">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+          <div class="card-header bg-success text-white text-center py-3">
+            <h3 class="mb-0 fw-bold"><i class="fa-solid fa-user-plus me-2"></i>Signup on Wanderlust</h3>
+          </div>
+
+          <div class="card-body p-4 bg-white">
+            <form method="POST" action="/signup" novalidate class="needs-validation">
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Username</label>
+                <input
+                  type="text"
+                  class="form-control form-control-lg shadow-sm"
+                  name="username"
+                  id="username"
+                  placeholder="Choose a username"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Email</label>
+                <input
+                  type="email"
+                  class="form-control form-control-lg shadow-sm"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Password</label>
+                <input
+                  type="password"
+                  class="form-control form-control-lg shadow-sm"
+                  name="password"
+                  id="password"
+                  placeholder="Create a strong password"
+                  required
+                />
+              </div>
+
+              <div class="d-grid mt-4">
+                <button class="btn btn-success btn-lg rounded-pill shadow-sm" type="submit">
+                  <i class="fa-solid fa-user-check me-2"></i>Sign Up
+                </button>
+              </div>
+
+              <div class="text-center mt-3">
+                <p class="mb-0 text-muted">
+                  Already have an account?
+                  <a href="/login" class="text-success fw-semibold text-decoration-none">Login here</a>
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="card-footer text-center text-muted small bg-light">
+            &copy; <%= new Date().getFullYear() %> Wanderlust | All rights reserved
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

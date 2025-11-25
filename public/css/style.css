@@ -1,0 +1,487 @@
+/* .navbar{
+    height:5rem;
+    background-color: aliceblue;
+}
+ .fa-compass {
+  text-decoration: none;
+  color: #ff5a5f; /* Airbnb का pinkish-red color */
+   /* font-size: 30px;
+  padding: 10px;
+}
+
+.fa-compass:hover {
+  color: #e74c3c; /* hover पर थोड़ा गहरा रंग */
+ /* }
+
+.nav-link{
+    color: black !important;
+} */
+
+/* a i {
+  font-size: 24px;
+  color: #333;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+a:hover i {
+  color: #0077b5; LinkedIn या hover color बदल सकते हो */
+ /* Navbar container */
+.navbar {
+  background-color: #ff5a5f; /* main navbar color */
+  padding: 10px 20px;
+}
+
+/* Brand icon / text */
+.navbar .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.navbar .navbar-brand:hover {
+  color: #ffeaea;
+  text-decoration: none;
+}
+
+/* Navbar links */
+.navbar .nav-link {
+  color: #fff;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  color: #ffeaea;
+}
+
+/* Toggler button (for mobile) */
+.navbar-toggler {
+  border-color: #fff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+
+/* Responsive: Smaller devices */
+@media (max-width: 768px) {
+  .navbar .nav-link {
+    margin: 5px 0;
+  }
+}
+
+
+
+/* footer p {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+
+.f-info-links a{
+    text-decoration: none;
+    color: #333;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+} */
+/* Footer overall container */
+footer {
+  background: linear-gradient(to top, #ff5a5f, #f8f9fa);
+ /* हल्का gray background */
+  padding: 30px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #ddd;
+}
+
+/* Inner container */
+.f-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* बीच में spacing */
+}
+
+/* Social media icons */
+.f-info-socials a {
+  color: #555;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.f-info-socials a:hover {
+  color: #ff5a5f; /* Hover पर रंग */
+}
+
+/* Copyright text */
+.f-info p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Terms & Privacy links */
+.f-info-links a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.f-info-links a:hover {
+  color: #ff5a5f; /* Hover color */
+  text-decoration: underline;
+}
+
+/* Responsive: Mobile में spacing बढ़ाना */
+@media (max-width: 768px) {
+  .f-info {
+    gap: 10px;
+  }
+
+  .f-info-socials a {
+    font-size: 18px;
+    margin: 0 8px;
+  }
+
+  .f-info-links a {
+    margin: 0 5px;
+  }
+}
+/* Card container */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden; /* image overflow रोकने के लिए */
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Card image - uniform size */
+.card-img-top {
+  width: 100%;
+  height: 200px; /* fixed height */
+  object-fit: cover; /* image crop करके card में फिट होगी */
+}
+
+/* Card body text */
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  color: #ff5a5f !important; /* Airbnb pink */
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Price text */
+.card-body p strong {
+  font-size: 16px;
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #ff5a5f !important;
+  border: none;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  background-color: #e74c3c !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-img-top {
+    height: 180px;
+  }
+  .card-title {
+    font-size: 16px;
+  }
+}
+
+
+/* Poora card anchor ke under hai */
+.card-link {
+   display: block;         /* poora div occupy kare */
+    text-decoration: none;   /* underline hataye */
+  color: inherit;          /* text ka color parent se aaye */
+  cursor: pointer;         /* click ka signal */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.card-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+
+/* पूरे card को लिंक जैसा बनाने के लिए */
+/* .card-link {
+  text-decoration: none;
+  color: inherit;
+} */
+
+/* hover effect देने के लिए */
+/* .card {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+
+/* .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+} */
+
+/* overlay heart icon */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+/* heart icon styling */
+.overlay i {
+  color: white;
+  font-size: 2rem;
+}
+
+/* image की shape थोड़ी smooth दिखे */
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+}
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.card h3 {
+  /* color: #0d6efd; */
+  font-weight: 600;
+}
+
+.btn-primary {
+  /* background-color: #0d6efd; */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+/* .btn-primary:hover { /* background-color: #084298; */
+  
+/* } */
+
+body {
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Body को पूरी height देना और flex container बनाना */
+body {
+  min-height: 100vh;        /* Body पूरी viewport height ले */
+  display: flex;
+  flex-direction: column;    /* ऊपर से नीचे की ओर layout */
+  margin: 0;
+}
+
+/* Content area flexible बनाओ ताकि footer bottom में रहे */
+.container {
+  flex: 1;                  /* Remaining space ले */
+}
+
+/* Container spacing */
+.container {
+    min-height: 100vh; /* Footer ke liye poora height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Card styling */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Card image (for show.ejs) */
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Card title */
+.card-title {
+    font-weight: 700;
+    color: #ff5a5f;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #ff5a5f;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e74c3c;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #b02a37;
+}
+
+/* Form inputs */
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #ff5a5f;
+    box-shadow: 0 0 8px rgba(255, 90, 95, 0.3);
+    outline: none;
+}
+
+/* Form label */
+.form-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Textarea */
+textarea.form-control {
+    resize: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card img {
+        height: 200px;
+    }
+}
+
+
+
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background-color: #e74c3c;
+}
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+<style>
+/* MAIN SEARCH BAR BOX */
+.nav-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background: white;
+  padding: 2px 8px;
+  margin-left: 316px;      /* ← तुम्हारे हिसाब से 315px margin */
+  border: 1px solid #ddd;
+}
+
+/* INPUT */
+.search-inp {
+  border: none;
+  outline: none;
+  width: 200px;
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+/* SEARCH BUTTON (white) */
+.search-btn {
+  margin-left: 10px;
+  background-color: white;   /* default white */
+  color: black;              /* default text black */
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.25s ease-in-out;
+}
+
+/* HOVER STATES */
+.search-btn:hover {
+  background-color: #ff5a5f;  /* navbar वाला color */
+  color: white;               /* hover पर text white */
+  border-color: #ff5a5f;
+}
+
+/* ICON SIZE */
+.search-btn i {
+  font-size: 14px;
+}
+
+
+
+/* FILTER BUTTON */
+.filter-btn {
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+/* HOVER */
+.filter-btn:hover {
+  background-color: #ff5a5f;
+  color: white;
+  border-color: #ff5a5f;
+}
+
+/* Icon size */
+.filter-btn i {
+  font-size: 14px;
+}
+
+</style>
+ 
+ 
+ <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+   
+<a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"  >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        
+        <a class="nav-link" href="/listings">Explore</a>
+        
+        
+      </div>
+
+
+<div class="d-flex align-items-center mx-auto">
+  <div class="nav-search">
+    <input class="search-inp" type="search" placeholder="Search destinations">
+  </div>
+
+  <button class="btn search-btn" type="submit">
+    <i class="fa-solid fa-magnifying-glass"></i> Search
+  </button>
+
+
+  <button class="btn filter-btn">
+  <i class="fa-solid fa-sliders"></i> Filters
+</button>
+
+</div>
+
+
+
+
+
+
+
+
+       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto ">
+        <a class="nav-link" href="/listings/new">Airbnb your home</a>
+        <% if(!currUser) {%>
+        <a class="nav-link "  href="/signup"><b>Sign up</b></a>
+        <a class="nav-link" href="/login"><b>Log in</b></a>
+        <%}%> 
+        <% if(currUser){%>
+          <a class="nav-link" href="/logout"><b>Log out</b></a>
+        <%}%> 
+      </div>
+
+    </div>
+  </div>
+</nav> 
