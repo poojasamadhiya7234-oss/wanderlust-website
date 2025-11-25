@@ -103,8 +103,6 @@ const sessionOptions = {
     }
 };
 
-app.use(session(sessionOptions));
-
 
 // const sessionOptions={
 //      store,
