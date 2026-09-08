@@ -1,5 +1,10 @@
+<!-- ========================================= -->
+<!-- CSS FOR SEARCH BAR AND FILTER BUTTON -->
+<!-- ========================================= -->
+
 <style>
-/* MAIN SEARCH BAR BOX */
+
+/* Main search input ka outer container */
 .nav-search {
   display: flex;
   align-items: center;
@@ -7,11 +12,12 @@
   border-radius: 25px;
   background: white;
   padding: 2px 8px;
-  margin-left: 316px;      /* ← तुम्हारे हिसाब से 315px margin */
+  margin-left: 316px;
   border: 1px solid #ddd;
 }
 
-/* INPUT */
+
+/* Search input field */
 .search-inp {
   border: none;
   outline: none;
@@ -21,11 +27,12 @@
   border-radius: 20px;
 }
 
-/* SEARCH BUTTON (white) */
+
+/* Search button */
 .search-btn {
   margin-left: 10px;
-  background-color: white;   /* default white */
-  color: black;              /* default text black */
+  background-color: white;
+  color: black;
   border: 1px solid #ddd;
   padding: 6px 14px;
   border-radius: 20px;
@@ -36,21 +43,22 @@
   transition: 0.25s ease-in-out;
 }
 
-/* HOVER STATES */
+
+/* Search button hover */
 .search-btn:hover {
-  background-color: #ff5a5f;  /* navbar वाला color */
-  color: white;               /* hover पर text white */
+  background-color: #ff5a5f;
+  color: white;
   border-color: #ff5a5f;
 }
 
-/* ICON SIZE */
+
+/* Search icon size */
 .search-btn i {
   font-size: 14px;
 }
 
 
-
-/* FILTER BUTTON */
+/* Filter button */
 .filter-btn {
   margin-left: 10px;
   background-color: white;
@@ -65,73 +73,146 @@
   transition: 0.3s ease-in-out;
 }
 
-/* HOVER */
+
+/* Filter button hover */
 .filter-btn:hover {
   background-color: #ff5a5f;
   color: white;
   border-color: #ff5a5f;
 }
 
-/* Icon size */
+
+/* Filter icon size */
 .filter-btn i {
   font-size: 14px;
 }
 
 </style>
- 
- 
- <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+
+
+<!-- ========================================= -->
+<!-- NAVBAR START -->
+<!-- ========================================= -->
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+
+  <!-- Bootstrap container -->
   <div class="container-fluid">
-   
-<a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"  >
+
+
+    <!-- WEBSITE LOGO -->
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-solid fa-compass"></i>
+    </a>
+
+
+    <!-- MOBILE NAVBAR TOGGLE BUTTON -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
+
+
+    <!-- COLLAPSIBLE NAVBAR CONTENT -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+
+      <!-- LEFT SIDE NAVIGATION -->
       <div class="navbar-nav">
-        
-        <a class="nav-link" href="/listings">Explore</a>
-        
-        
+
+        <!-- Explore page link -->
+        <a class="nav-link" href="/listings">
+          Explore
+        </a>
+
       </div>
 
 
-<div class="d-flex align-items-center mx-auto">
-  <div class="nav-search">
-    <input class="search-inp" type="search" placeholder="Search destinations">
-  </div>
-
-  <button class="btn search-btn" type="submit">
-    <i class="fa-solid fa-magnifying-glass"></i> Search
-  </button>
+      <!-- SEARCH BAR + SEARCH BUTTON + FILTER BUTTON -->
+      <div class="d-flex align-items-center mx-auto">
 
 
-  <button class="btn filter-btn">
-  <i class="fa-solid fa-sliders"></i> Filters
-</button>
+        <!-- Search input -->
+        <div class="nav-search">
 
-</div>
+          <input
+            class="search-inp"
+            type="search"
+            placeholder="Search destinations"
+          >
+
+        </div>
 
 
+        <!-- Search button -->
+        <button class="btn search-btn" type="submit">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          Search
+
+        </button>
 
 
+        <!-- Filter button -->
+        <button class="btn filter-btn">
+
+          <i class="fa-solid fa-sliders"></i>
+
+          Filters
+
+        </button>
+
+      </div>
 
 
+      <!-- RIGHT SIDE NAVIGATION -->
+      <div class="navbar-nav ms-auto">
 
 
-       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav ms-auto ">
-        <a class="nav-link" href="/listings/new">Airbnb your home</a>
-        <% if(!currUser) {%>
-        <a class="nav-link "  href="/signup"><b>Sign up</b></a>
-        <a class="nav-link" href="/login"><b>Log in</b></a>
-        <%}%> 
-        <% if(currUser){%>
-          <a class="nav-link" href="/logout"><b>Log out</b></a>
-        <%}%> 
+        <!-- New listing link -->
+        <a class="nav-link" href="/listings/new">
+          Airbnb your home
+        </a>
+
+
+        <!-- Agar user login nahi hai -->
+        <% if (typeof currUser === "undefined" || !currUser) { %>
+
+          <a class="nav-link" href="/signup">
+            <b>Sign up</b>
+          </a>
+
+          <a class="nav-link" href="/login">
+            <b>Log in</b>
+          </a>
+
+        <% } %>
+
+
+        <!-- Agar user login hai -->
+        <% if (typeof currUser !== "undefined" && currUser) { %>
+
+          <a class="nav-link" href="/logout">
+            <b>Log out</b>
+          </a>
+
+        <% } %>
+
+
       </div>
 
     </div>
+
   </div>
-</nav> 
+
+</nav>
+
+<!-- ========================================= -->
+<!-- NAVBAR END -->
+<!-- ========================================= -->
+
