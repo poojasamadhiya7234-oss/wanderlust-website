@@ -1,90 +1,183 @@
 <!-- ========================================= -->
-<!-- CSS FOR SEARCH BAR AND FILTER BUTTON -->
+<!-- NAVBAR CSS -->
 <!-- ========================================= -->
 
 <style>
 
-/* Main search input ka outer container */
+/* ============================= */
+/* MAIN NAVBAR */
+/* ============================= */
+
+.navbar {
+  background-color: white !important;
+  min-height: 70px;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  color: #ff385c !important;
+  font-size: 28px;
+  margin-right: 25px;
+}
+
+
+/* ============================= */
+/* SEARCH AREA */
+/* ============================= */
+
 .nav-search {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 25px;
   background: white;
-  padding: 2px 8px;
-  margin-left: 316px;
   border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 4px 10px;
 }
 
-
-/* Search input field */
 .search-inp {
   border: none;
   outline: none;
   width: 200px;
-  padding: 4px 10px;
+  padding: 7px 10px;
   font-size: 14px;
   border-radius: 20px;
 }
 
-
-/* Search button */
-.search-btn {
-  margin-left: 10px;
-  background-color: white;
-  color: black;
-  border: 1px solid #ddd;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: 0.25s ease-in-out;
-}
-
-
-/* Search button hover */
-.search-btn:hover {
-  background-color: #ff5a5f;
-  color: white;
-  border-color: #ff5a5f;
-}
-
-
-/* Search icon size */
-.search-btn i {
-  font-size: 14px;
-}
-
-
-/* Filter button */
+.search-btn,
 .filter-btn {
   margin-left: 10px;
   background-color: white;
-  color: black;
+  color: #222;
   border: 1px solid #ddd;
-  padding: 6px 14px;
-  border-radius: 20px;
+  padding: 8px 16px;
+  border-radius: 25px;
   font-size: 14px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
-  transition: 0.3s ease-in-out;
+  transition: 0.25s ease-in-out;
+  white-space: nowrap;
 }
 
-
-/* Filter button hover */
+.search-btn:hover,
 .filter-btn:hover {
-  background-color: #ff5a5f;
+  background-color: #ff385c;
   color: white;
-  border-color: #ff5a5f;
+  border-color: #ff385c;
 }
 
 
-/* Filter icon size */
-.filter-btn i {
-  font-size: 14px;
+/* ============================= */
+/* NAV LINKS */
+/* ============================= */
+
+.nav-link {
+  color: #222 !important;
+  font-size: 15px;
+  padding: 10px 12px !important;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: #ff385c !important;
+}
+
+
+/* ============================= */
+/* MOBILE NAVBAR */
+/* ============================= */
+
+@media (max-width: 767px) {
+
+  .navbar {
+    min-height: 62px;
+    padding: 8px 12px;
+  }
+
+  .navbar-brand {
+    font-size: 25px;
+  }
+
+  .navbar-toggler {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 7px 10px;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar-collapse {
+    background-color: white;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  }
+
+
+  /* Explore + right links */
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 12px 5px !important;
+    font-size: 16px;
+  }
+
+
+  /* Search area */
+  .navbar-collapse > .d-flex {
+    width: 100%;
+    margin: 10px 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-search {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .search-inp {
+    width: 100%;
+    font-size: 15px;
+    padding: 9px 10px;
+  }
+
+  .search-btn,
+  .filter-btn {
+    margin-left: 0;
+    flex: 1;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+}
+
+
+/* ============================= */
+/* SMALL MOBILE SCREEN */
+/* ============================= */
+
+@media (max-width: 400px) {
+
+  .search-btn,
+  .filter-btn {
+    font-size: 13px;
+    padding: 9px 8px;
+  }
+
+  .navbar-collapse {
+    padding: 12px;
+  }
+
 }
 
 </style>
@@ -94,11 +187,9 @@
 <!-- NAVBAR START -->
 <!-- ========================================= -->
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-md border-bottom sticky-top">
 
-  <!-- Bootstrap container -->
   <div class="container-fluid">
-
 
     <!-- WEBSITE LOGO -->
     <a class="navbar-brand" href="/listings">
@@ -106,25 +197,27 @@
     </a>
 
 
-    <!-- MOBILE NAVBAR TOGGLE BUTTON -->
+    <!-- MOBILE MENU BUTTON -->
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
 
 
-    <!-- COLLAPSIBLE NAVBAR CONTENT -->
+    <!-- NAVBAR CONTENT -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
 
-      <!-- LEFT SIDE NAVIGATION -->
+      <!-- LEFT SIDE -->
       <div class="navbar-nav">
 
-        <!-- Explore page link -->
         <a class="nav-link" href="/listings">
           Explore
         </a>
@@ -132,9 +225,8 @@
       </div>
 
 
-      <!-- SEARCH BAR + SEARCH BUTTON + FILTER BUTTON -->
+      <!-- SEARCH + FILTER -->
       <div class="d-flex align-items-center mx-auto">
-
 
         <!-- Search input -->
         <div class="nav-search">
@@ -153,34 +245,33 @@
 
           <i class="fa-solid fa-magnifying-glass"></i>
 
-          Search
+          <span>Search</span>
 
         </button>
 
 
         <!-- Filter button -->
-        <button class="btn filter-btn">
+        <button class="btn filter-btn" type="button">
 
           <i class="fa-solid fa-sliders"></i>
 
-          Filters
+          <span>Filters</span>
 
         </button>
 
       </div>
 
 
-      <!-- RIGHT SIDE NAVIGATION -->
+      <!-- RIGHT SIDE -->
       <div class="navbar-nav ms-auto">
 
-
-        <!-- New listing link -->
+        <!-- New listing -->
         <a class="nav-link" href="/listings/new">
           Airbnb your home
         </a>
 
 
-        <!-- Agar user login nahi hai -->
+        <!-- NOT LOGGED IN -->
         <% if (typeof currUser === "undefined" || !currUser) { %>
 
           <a class="nav-link" href="/signup">
@@ -194,7 +285,7 @@
         <% } %>
 
 
-        <!-- Agar user login hai -->
+        <!-- LOGGED IN -->
         <% if (typeof currUser !== "undefined" && currUser) { %>
 
           <a class="nav-link" href="/logout">
@@ -202,7 +293,6 @@
           </a>
 
         <% } %>
-
 
       </div>
 
@@ -215,4 +305,3 @@
 <!-- ========================================= -->
 <!-- NAVBAR END -->
 <!-- ========================================= -->
-
