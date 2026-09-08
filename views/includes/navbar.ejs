@@ -4,181 +4,254 @@
 
 <style>
 
-/* ============================= */
-/* MAIN NAVBAR */
-/* ============================= */
-
-.navbar {
-  background-color: white !important;
-  min-height: 70px;
-  padding: 10px 0;
-}
-
-.navbar-brand {
-  color: #ff385c !important;
-  font-size: 28px;
-  margin-right: 25px;
-}
-
-
-/* ============================= */
-/* SEARCH AREA */
-/* ============================= */
-
-.nav-search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 30px;
-  padding: 4px 10px;
-}
-
-.search-inp {
-  border: none;
-  outline: none;
-  width: 200px;
-  padding: 7px 10px;
-  font-size: 14px;
-  border-radius: 20px;
-}
-
-.search-btn,
-.filter-btn {
-  margin-left: 10px;
-  background-color: white;
-  color: #222;
-  border: 1px solid #ddd;
-  padding: 8px 16px;
-  border-radius: 25px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  transition: 0.25s ease-in-out;
-  white-space: nowrap;
-}
-
-.search-btn:hover,
-.filter-btn:hover {
-  background-color: #ff385c;
-  color: white;
-  border-color: #ff385c;
-}
-
-
-/* ============================= */
-/* NAV LINKS */
-/* ============================= */
-
-.nav-link {
-  color: #222 !important;
-  font-size: 15px;
-  padding: 10px 12px !important;
-  transition: 0.2s;
-}
-
-.nav-link:hover {
-  color: #ff385c !important;
-}
-
-
-/* ============================= */
-/* MOBILE NAVBAR */
-/* ============================= */
-
-@media (max-width: 767px) {
+  /* ============================= */
+  /* MAIN NAVBAR */
+  /* ============================= */
 
   .navbar {
-    min-height: 62px;
-    padding: 8px 12px;
+    background-color: #ffffff !important;
+    padding: 10px 20px;
   }
 
   .navbar-brand {
-    font-size: 25px;
-  }
-
-  .navbar-toggler {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 7px 10px;
-  }
-
-  .navbar-toggler:focus {
-    box-shadow: none;
-  }
-
-  .navbar-collapse {
-    background-color: white;
-    margin-top: 10px;
-    padding: 15px;
-    border-radius: 15px;
-    border: 1px solid #eee;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    color: #ff5a5f !important;
+    font-size: 28px;
+    margin-right: 25px;
   }
 
 
-  /* Explore + right links */
-  .navbar-nav {
-    width: 100%;
-  }
+  /* ============================= */
+  /* SEARCH AREA */
+  /* ============================= */
 
-  .navbar-nav .nav-link {
-    padding: 12px 5px !important;
-    font-size: 16px;
-  }
-
-
-  /* Search area */
-  .navbar-collapse > .d-flex {
-    width: 100%;
-    margin: 10px 0 !important;
+  .navbar-search-area {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
   }
+
+
+  /* Search input outer box */
 
   .nav-search {
-    width: 100%;
-    margin-left: 0 !important;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    height: 42px;
+    width: 250px;
+    margin: 0;
+    padding: 0 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
+
+
+  /* Search input */
 
   .search-inp {
     width: 100%;
-    font-size: 15px;
-    padding: 9px 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 6px 8px;
   }
 
-  .search-btn,
-  .filter-btn {
-    margin-left: 0;
-    flex: 1;
-    padding: 10px 12px;
+
+  /* ============================= */
+  /* SEARCH BUTTON */
+  /* ============================= */
+
+  .search-btn {
+    height: 42px;
+    background-color: white;
+    color: #222;
+    border: 1px solid #ddd;
+    padding: 0 18px;
+    border-radius: 25px;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+
+  .search-btn:hover {
+    background-color: #ff5a5f;
+    color: white;
+    border-color: #ff5a5f;
+  }
+
+
+  .search-btn i {
     font-size: 14px;
   }
 
-}
 
+  /* ============================= */
+  /* FILTER BUTTON */
+  /* ============================= */
 
-/* ============================= */
-/* SMALL MOBILE SCREEN */
-/* ============================= */
-
-@media (max-width: 400px) {
-
-  .search-btn,
   .filter-btn {
-    font-size: 13px;
-    padding: 9px 8px;
+    height: 42px;
+    background-color: white;
+    color: #222;
+    border: 1px solid #ddd;
+    padding: 0 18px;
+    border-radius: 25px;
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    transition: all 0.25s ease;
+    white-space: nowrap;
   }
 
-  .navbar-collapse {
-    padding: 12px;
+
+  .filter-btn:hover {
+    background-color: #ff5a5f;
+    color: white;
+    border-color: #ff5a5f;
   }
 
-}
+
+  .filter-btn i {
+    font-size: 14px;
+  }
+
+
+  /* ============================= */
+  /* NAV LINKS */
+  /* ============================= */
+
+  .navbar .nav-link {
+    color: #222 !important;
+    font-size: 15px;
+    margin: 0 5px;
+    transition: 0.2s;
+  }
+
+
+  .navbar .nav-link:hover {
+    color: #ff5a5f !important;
+  }
+
+
+  /* ============================= */
+  /* MOBILE RESPONSIVE */
+  /* ============================= */
+
+  @media (max-width: 767px) {
+
+    .navbar {
+      padding: 10px 15px;
+    }
+
+
+    /* Logo */
+
+    .navbar-brand {
+      font-size: 25px;
+    }
+
+
+    /* Collapsed menu */
+
+    .navbar-collapse {
+      padding-top: 15px;
+    }
+
+
+    /* Search area */
+
+    .navbar-search-area {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 15px 0;
+    }
+
+
+    /* Search input */
+
+    .nav-search {
+      width: 100%;
+      height: 45px;
+      margin: 0 !important;
+      flex: 1 1 100%;
+    }
+
+
+    .search-inp {
+      width: 100%;
+      font-size: 15px;
+    }
+
+
+    /* Buttons */
+
+    .search-btn,
+    .filter-btn {
+      height: 44px;
+      margin: 0 !important;
+      flex: 1;
+    }
+
+
+    /* Left and right links */
+
+    .navbar-nav {
+      width: 100%;
+    }
+
+
+    .navbar-nav .nav-link {
+      padding: 10px 5px;
+    }
+
+
+    /* Right side links */
+
+    .navbar .ms-auto {
+      margin-left: 0 !important;
+      margin-top: 5px;
+    }
+
+  }
+
+
+  /* ============================= */
+  /* SMALL MOBILE SCREEN */
+  /* ============================= */
+
+  @media (max-width: 400px) {
+
+    .navbar {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+
+    .search-btn,
+    .filter-btn {
+      font-size: 13px;
+      padding: 0 10px;
+    }
+
+  }
 
 </style>
 
@@ -191,13 +264,20 @@
 
   <div class="container-fluid">
 
+
+    <!-- ============================= -->
     <!-- WEBSITE LOGO -->
+    <!-- ============================= -->
+
     <a class="navbar-brand" href="/listings">
       <i class="fa-solid fa-compass"></i>
     </a>
 
 
+    <!-- ============================= -->
     <!-- MOBILE MENU BUTTON -->
+    <!-- ============================= -->
+
     <button
       class="navbar-toggler"
       type="button"
@@ -211,11 +291,20 @@
     </button>
 
 
-    <!-- NAVBAR CONTENT -->
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <!-- ============================= -->
+    <!-- COLLAPSIBLE NAVBAR -->
+    <!-- ============================= -->
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNavAltMarkup"
+    >
 
 
-      <!-- LEFT SIDE -->
+      <!-- ============================= -->
+      <!-- LEFT NAVIGATION -->
+      <!-- ============================= -->
+
       <div class="navbar-nav">
 
         <a class="nav-link" href="/listings">
@@ -225,10 +314,15 @@
       </div>
 
 
+      <!-- ============================= -->
       <!-- SEARCH + FILTER -->
-      <div class="d-flex align-items-center mx-auto">
+      <!-- ============================= -->
+
+      <div class="navbar-search-area">
+
 
         <!-- Search input -->
+
         <div class="nav-search">
 
           <input
@@ -241,67 +335,79 @@
 
 
         <!-- Search button -->
-        <button class="btn search-btn" type="submit">
+
+        <button
+          class="btn search-btn"
+          type="button"
+        >
 
           <i class="fa-solid fa-magnifying-glass"></i>
 
-          <span>Search</span>
+          Search
 
         </button>
 
 
         <!-- Filter button -->
-        <button class="btn filter-btn" type="button">
+
+        <button
+          class="btn filter-btn"
+          type="button"
+        >
 
           <i class="fa-solid fa-sliders"></i>
 
-          <span>Filters</span>
+          Filters
 
         </button>
+
 
       </div>
 
 
-      <!-- RIGHT SIDE -->
+      <!-- ============================= -->
+      <!-- RIGHT NAVIGATION -->
+      <!-- ============================= -->
+
       <div class="navbar-nav ms-auto">
 
-        <!-- New listing -->
-        <a class="nav-link" href="/listings/new">
+
+        <!-- Add new listing -->
+
+        <a
+          class="nav-link"
+          href="/listings/new"
+        >
           Airbnb your home
         </a>
 
 
-        <!-- NOT LOGGED IN -->
+        <!-- ============================= -->
+        <!-- USER NOT LOGGED IN -->
+        <!-- ============================= -->
+
         <% if (typeof currUser === "undefined" || !currUser) { %>
 
-          <a class="nav-link" href="/signup">
+
+          <a
+            class="nav-link"
+            href="/signup"
+          >
             <b>Sign up</b>
           </a>
 
-          <a class="nav-link" href="/login">
+
+          <a
+            class="nav-link"
+            href="/login"
+          >
             <b>Log in</b>
           </a>
 
-        <% } %>
-
-
-        <!-- LOGGED IN -->
-        <% if (typeof currUser !== "undefined" && currUser) { %>
-
-          <a class="nav-link" href="/logout">
-            <b>Log out</b>
-          </a>
 
         <% } %>
 
-      </div>
 
-    </div>
-
-  </div>
-
-</nav>
-
-<!-- ========================================= -->
-<!-- NAVBAR END -->
-<!-- ========================================= -->
+        <!-- ============================= -->
+        <!-- USER LOGGED IN -->
+        <!--
