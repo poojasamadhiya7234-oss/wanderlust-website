@@ -1,257 +1,136 @@
 <!-- ========================================= -->
-<!-- NAVBAR CSS -->
+<!-- CSS FOR SEARCH BAR AND FILTER BUTTON -->
 <!-- ========================================= -->
 
 <style>
 
-  /* ============================= */
-  /* NAVBAR MAIN */
-  /* ============================= */
+.nav-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background: white;
+  padding: 2px 8px;
+  margin-left: 316px;
+  border: 1px solid #ddd;
+}
 
-  .navbar {
-    min-height: 70px;
-  }
+.search-inp {
+  border: none;
+  outline: none;
+  width: 200px;
+  padding: 4px 10px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+
+.search-btn {
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.25s ease-in-out;
+}
+
+.search-btn:hover {
+  background-color: #ff5a5f;
+  color: white;
+  border-color: #ff5a5f;
+}
+
+.search-btn i {
+  font-size: 14px;
+}
+
+.filter-btn {
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease-in-out;
+}
+
+.filter-btn:hover {
+  background-color: #ff5a5f;
+  color: white;
+  border-color: #ff5a5f;
+}
+
+.filter-btn i {
+  font-size: 14px;
+}
 
 
-  /* ============================= */
-  /* LOGO */
-  /* ============================= */
+/* ========================================= */
+/* MOBILE ONLY */
+/* ========================================= */
 
-  .navbar-brand {
-    font-size: 28px;
-    color: #ff385c;
-    margin-right: 25px;
-  }
-
-  .navbar-brand:hover {
-    color: #e31c5f;
-  }
-
-
-  /* ============================= */
-  /* SEARCH AREA */
-  /* ============================= */
-
-  .navbar-search-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex: 1;
-  }
-
-
-  /* Search input container */
+@media (max-width: 767px) {
 
   .nav-search {
-    display: flex;
-    align-items: center;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    height: 44px;
-    width: 230px;
-    margin-left: 0;
-    overflow: hidden;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 2px 8px;
   }
-
-
-  /* Search input */
 
   .search-inp {
-    border: none;
-    outline: none;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .navbar-collapse .d-flex {
     width: 100%;
-    height: 100%;
-    padding: 0 15px;
-    font-size: 14px;
-    background: transparent;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-
-
-  .search-inp::placeholder {
-    color: #777;
-  }
-
-
-  /* ============================= */
-  /* SEARCH BUTTON */
-  /* ============================= */
 
   .search-btn {
-    background-color: white;
-    color: #222;
-    border: 1px solid #ddd;
-    height: 44px;
-    padding: 0 18px;
-    border-radius: 25px;
-    font-size: 14px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-
-    transition: 0.25s ease-in-out;
-    white-space: nowrap;
+    margin-left: 0 !important;
   }
-
-
-  .search-btn:hover {
-    background-color: #ff385c;
-    color: white;
-    border-color: #ff385c;
-  }
-
-
-  .search-btn i {
-    font-size: 14px;
-  }
-
-
-  /* ============================= */
-  /* FILTER BUTTON */
-  /* ============================= */
 
   .filter-btn {
-    background-color: white;
-    color: #222;
-    border: 1px solid #ddd;
-    height: 44px;
-    padding: 0 18px;
-    border-radius: 25px;
-    font-size: 14px;
+    margin-left: 0 !important;
+  }
 
-    display: flex;
-    align-items: center;
+}
+
+
+/* ========================================= */
+/* SMALL MOBILE */
+/* ========================================= */
+
+@media (max-width: 500px) {
+
+  .navbar-collapse .d-flex {
+    flex-direction: column;
+    align-items: stretch !important;
+  }
+
+  .nav-search {
+    width: 100% !important;
+  }
+
+  .search-btn,
+  .filter-btn {
+    width: 100%;
     justify-content: center;
-    gap: 7px;
-
-    transition: 0.25s ease-in-out;
-    white-space: nowrap;
   }
 
-
-  .filter-btn:hover {
-    background-color: #ff385c;
-    color: white;
-    border-color: #ff385c;
-  }
-
-
-  .filter-btn i {
-    font-size: 14px;
-  }
-
-
-  /* ============================= */
-  /* MOBILE DESIGN */
-  /* ============================= */
-
-  @media (max-width: 767px) {
-
-    .navbar {
-      min-height: 60px;
-    }
-
-
-    /* Logo */
-
-    .navbar-brand {
-      font-size: 24px;
-      margin-right: 0;
-    }
-
-
-    /* Hamburger */
-
-    .navbar-toggler {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 7px 10px;
-    }
-
-
-    .navbar-toggler:focus {
-      box-shadow: none;
-    }
-
-
-    /* Collapsed navbar */
-
-    .navbar-collapse {
-      padding: 15px 0;
-    }
-
-
-    /* Left + right navigation */
-
-    .navbar-nav {
-      width: 100%;
-    }
-
-
-    .navbar-nav .nav-link {
-      padding: 12px 5px;
-    }
-
-
-    /* ============================= */
-    /* MOBILE SEARCH */
-    /* ============================= */
-
-    .navbar-search-area {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 10px;
-
-      margin: 10px 0 !important;
-    }
-
-
-    .nav-search {
-      width: 100% !important;
-      height: 45px;
-      margin: 0 !important;
-    }
-
-
-    .search-inp {
-      width: 100% !important;
-      min-width: 0 !important;
-      font-size: 14px;
-    }
-
-
-    .search-btn,
-    .filter-btn {
-      width: 100%;
-      height: 45px;
-      margin: 0 !important;
-    }
-
-  }
-
-
-  /* ============================= */
-  /* VERY SMALL PHONES */
-  /* ============================= */
-
-  @media (max-width: 400px) {
-
-    .navbar-search-area {
-      padding: 0;
-    }
-
-
-    .search-btn,
-    .filter-btn {
-      font-size: 14px;
-    }
-
-  }
+}
 
 </style>
 
@@ -264,19 +143,14 @@
 
   <div class="container-fluid">
 
-
-    <!-- ============================= -->
     <!-- WEBSITE LOGO -->
-    <!-- ============================= -->
 
     <a class="navbar-brand" href="/listings">
       <i class="fa-solid fa-compass"></i>
     </a>
 
 
-    <!-- ============================= -->
-    <!-- MOBILE TOGGLE BUTTON -->
-    <!-- ============================= -->
+    <!-- MOBILE NAVBAR TOGGLE -->
 
     <button
       class="navbar-toggler"
@@ -287,22 +161,16 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-
       <span class="navbar-toggler-icon"></span>
-
     </button>
 
 
-    <!-- ============================= -->
-    <!-- COLLAPSIBLE CONTENT -->
-    <!-- ============================= -->
+    <!-- NAVBAR CONTENT -->
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
 
-      <!-- ============================= -->
-      <!-- LEFT NAVIGATION -->
-      <!-- ============================= -->
+      <!-- LEFT SIDE -->
 
       <div class="navbar-nav">
 
@@ -313,14 +181,9 @@
       </div>
 
 
-      <!-- ============================= -->
-      <!-- SEARCH + FILTER AREA -->
-      <!-- ============================= -->
+      <!-- SEARCH + FILTER -->
 
-      <div class="navbar-search-area">
-
-
-        <!-- Search input -->
+      <div class="d-flex align-items-center mx-auto">
 
         <div class="nav-search">
 
@@ -328,13 +191,10 @@
             class="search-inp"
             type="search"
             placeholder="Search destinations"
-            aria-label="Search destinations"
           >
 
         </div>
 
-
-        <!-- Search button -->
 
         <button
           class="btn search-btn"
@@ -343,12 +203,10 @@
 
           <i class="fa-solid fa-magnifying-glass"></i>
 
-          <span>Search</span>
+          Search
 
         </button>
 
-
-        <!-- Filter button -->
 
         <button
           class="btn filter-btn"
@@ -357,22 +215,16 @@
 
           <i class="fa-solid fa-sliders"></i>
 
-          <span>Filters</span>
+          Filters
 
         </button>
-
 
       </div>
 
 
-      <!-- ============================= -->
-      <!-- RIGHT NAVIGATION -->
-      <!-- ============================= -->
+      <!-- RIGHT SIDE -->
 
       <div class="navbar-nav ms-auto">
-
-
-        <!-- Airbnb your home -->
 
         <a
           class="nav-link"
@@ -381,10 +233,6 @@
           Airbnb your home
         </a>
 
-
-        <!-- ============================= -->
-        <!-- USER NOT LOGGED IN -->
-        <!-- ============================= -->
 
         <% if (typeof currUser === "undefined" || !currUser) { %>
 
@@ -395,7 +243,6 @@
             <b>Sign up</b>
           </a>
 
-
           <a
             class="nav-link"
             href="/login"
@@ -405,10 +252,6 @@
 
         <% } %>
 
-
-        <!-- ============================= -->
-        <!-- USER LOGGED IN -->
-        <!-- ============================= -->
 
         <% if (typeof currUser !== "undefined" && currUser) { %>
 
@@ -421,9 +264,7 @@
 
         <% } %>
 
-
       </div>
-
 
     </div>
 
