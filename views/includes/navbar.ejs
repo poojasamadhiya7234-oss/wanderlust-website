@@ -4,6 +4,7 @@
 
 <style>
 
+/* Main search input ka outer container */
 .nav-search {
   display: flex;
   align-items: center;
@@ -15,6 +16,8 @@
   border: 1px solid #ddd;
 }
 
+
+/* Search input field */
 .search-inp {
   border: none;
   outline: none;
@@ -24,6 +27,8 @@
   border-radius: 20px;
 }
 
+
+/* Search button */
 .search-btn {
   margin-left: 10px;
   background-color: white;
@@ -38,16 +43,22 @@
   transition: 0.25s ease-in-out;
 }
 
+
+/* Search button hover */
 .search-btn:hover {
   background-color: #ff5a5f;
   color: white;
   border-color: #ff5a5f;
 }
 
+
+/* Search icon size */
 .search-btn i {
   font-size: 14px;
 }
 
+
+/* Filter button */
 .filter-btn {
   margin-left: 10px;
   background-color: white;
@@ -62,74 +73,18 @@
   transition: 0.3s ease-in-out;
 }
 
+
+/* Filter button hover */
 .filter-btn:hover {
   background-color: #ff5a5f;
   color: white;
   border-color: #ff5a5f;
 }
 
+
+/* Filter icon size */
 .filter-btn i {
   font-size: 14px;
-}
-
-
-/* ========================================= */
-/* MOBILE ONLY */
-/* ========================================= */
-
-@media (max-width: 767px) {
-
-  .nav-search {
-    width: 100% !important;
-    margin-left: 0 !important;
-    padding: 2px 8px;
-  }
-
-  .search-inp {
-    width: 100% !important;
-    min-width: 0 !important;
-  }
-
-  .navbar-collapse .d-flex {
-    width: 100%;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .search-btn {
-    margin-left: 0 !important;
-  }
-
-  .filter-btn {
-    margin-left: 0 !important;
-  }
-
-}
-
-
-/* ========================================= */
-/* SMALL MOBILE */
-/* ========================================= */
-
-@media (max-width: 500px) {
-
-  .navbar-collapse .d-flex {
-    flex-direction: column;
-    align-items: stretch !important;
-  }
-
-  .nav-search {
-    width: 100% !important;
-  }
-
-  .search-btn,
-  .filter-btn {
-    width: 100%;
-    justify-content: center;
-  }
-
 }
 
 </style>
@@ -141,39 +96,35 @@
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
 
+  <!-- Bootstrap container -->
   <div class="container-fluid">
 
-    <!-- WEBSITE LOGO -->
 
+    <!-- WEBSITE LOGO -->
     <a class="navbar-brand" href="/listings">
       <i class="fa-solid fa-compass"></i>
     </a>
 
 
-    <!-- MOBILE NAVBAR TOGGLE -->
-
+    <!-- MOBILE NAVBAR TOGGLE BUTTON -->
     <button
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
 
 
-    <!-- NAVBAR CONTENT -->
-
+    <!-- COLLAPSIBLE NAVBAR CONTENT -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
 
-      <!-- LEFT SIDE -->
-
+      <!-- LEFT SIDE NAVIGATION -->
       <div class="navbar-nav">
 
+        <!-- Explore page link -->
         <a class="nav-link" href="/listings">
           Explore
         </a>
@@ -181,10 +132,11 @@
       </div>
 
 
-      <!-- SEARCH + FILTER -->
-
+      <!-- SEARCH BAR + SEARCH BUTTON + FILTER BUTTON -->
       <div class="d-flex align-items-center mx-auto">
 
+
+        <!-- Search input -->
         <div class="nav-search">
 
           <input
@@ -196,10 +148,8 @@
         </div>
 
 
-        <button
-          class="btn search-btn"
-          type="button"
-        >
+        <!-- Search button -->
+        <button class="btn search-btn" type="submit">
 
           <i class="fa-solid fa-magnifying-glass"></i>
 
@@ -208,10 +158,8 @@
         </button>
 
 
-        <button
-          class="btn filter-btn"
-          type="button"
-        >
+        <!-- Filter button -->
+        <button class="btn filter-btn">
 
           <i class="fa-solid fa-sliders"></i>
 
@@ -222,47 +170,39 @@
       </div>
 
 
-      <!-- RIGHT SIDE -->
-
+      <!-- RIGHT SIDE NAVIGATION -->
       <div class="navbar-nav ms-auto">
 
-        <a
-          class="nav-link"
-          href="/listings/new"
-        >
+
+        <!-- New listing link -->
+        <a class="nav-link" href="/listings/new">
           Airbnb your home
         </a>
 
 
+        <!-- Agar user login nahi hai -->
         <% if (typeof currUser === "undefined" || !currUser) { %>
 
-          <a
-            class="nav-link"
-            href="/signup"
-          >
+          <a class="nav-link" href="/signup">
             <b>Sign up</b>
           </a>
 
-          <a
-            class="nav-link"
-            href="/login"
-          >
+          <a class="nav-link" href="/login">
             <b>Log in</b>
           </a>
 
         <% } %>
 
 
+        <!-- Agar user login hai -->
         <% if (typeof currUser !== "undefined" && currUser) { %>
 
-          <a
-            class="nav-link"
-            href="/logout"
-          >
+          <a class="nav-link" href="/logout">
             <b>Log out</b>
           </a>
 
         <% } %>
+
 
       </div>
 
